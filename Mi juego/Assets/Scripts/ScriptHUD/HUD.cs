@@ -16,6 +16,6 @@ public class HUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        puntos.text = gameManager.PuntosTotales.ToString();
+        puntos.text = "Monedas: " + gameManager.PuntosTotales.ToString();
     }
 }
