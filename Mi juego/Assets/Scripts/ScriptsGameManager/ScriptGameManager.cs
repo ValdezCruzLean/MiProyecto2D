@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class ScriptGameManager : MonoBehaviour
@@ -43,12 +44,21 @@ public class ScriptGameManager : MonoBehaviour
     public void PerderVida()
     {
         vidas -= 1;
+        if (vidas == 0)
+        {
+            SceneManager.LoadScene(0);
+        }
         hud.DesactivarVida(vidas);
         
     }
-    public void GanarVida()
+    public bool GanarVida()
     {
+        if(vidas == 3)
+        {
+            return false;
+        }
         hud.ActivarVida(vidas);
         vidas += 1;
+        return true;
     }
 }

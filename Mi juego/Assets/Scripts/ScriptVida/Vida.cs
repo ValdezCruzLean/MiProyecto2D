@@ -18,8 +18,13 @@ public class Vida : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other1)
     {
         if (other1.gameObject.CompareTag("Player"))
-        {  //ScriptGameManager.instance.GanarVida();
-            Destroy(this.gameObject);
+        {
+            bool vidaRecuperada = ScriptGameManager.instance.GanarVida();
+
+            if (vidaRecuperada)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }
