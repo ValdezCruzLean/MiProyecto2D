@@ -32,7 +32,7 @@ public class SpawnerFire : MonoBehaviour
     IEnumerator MiCorrutina()
     {
         this.speed = this.speed * -1;
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(26);
        
         StartCoroutine("MiCorrutina");
     }

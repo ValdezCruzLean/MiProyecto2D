@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HUD : MonoBehaviour
 {
-    public ScriptGameManager gameManager;
+    public GameObject[] vidas;
     public TextMeshProUGUI puntos;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +16,21 @@ public class HUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        puntos.text = "Monedas: " + gameManager.PuntosTotales.ToString();
+        puntos.text = "Monedas: " + ScriptGameManager.instance.PuntosTotales.ToString();
+    }
+
+    public void ActualizarPuntos(int puntosTotales)
+    {
+        puntos.text= puntosTotales.ToString();
+    }
+
+    public void DesactivarVida(int indice)
+    {
+        vidas[indice].SetActive(false);
+    }
+
+    public void ActivarVida(int indice)
+    {
+        vidas[indice].SetActive(true);
     }
 }

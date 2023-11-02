@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CharacterJump : MonoBehaviour
 {
-     [SerializeField] private float jumpForce = 2500f;//fuerza
+   [SerializeField] private float jumpForce = 2500f;//fuerza
     private bool isGrounded;
     private Rigidbody2D rb;
-    public int saltosMaximos = 1;
-    private int saltosRestantes;
+   // public int saltosMaximos = 1;
+    //private int saltosRestantes;
   
 
 
@@ -16,29 +16,26 @@ public class CharacterJump : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        saltosRestantes = saltosMaximos;
+       // saltosRestantes = saltosMaximos;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        ProcesarSalto();
+       if(isGrounded && Input.GetButton("Jump"))
+        {
+            Jump();
+        }
 
     }
-    void ProcesarSalto()
+    private void Jump()
     {
-        if(isGrounded == true)
-        {
-            saltosRestantes = saltosMaximos;
-        }
-        if ((saltosRestantes>0) && Input.GetKeyDown(KeyCode.Space))
-     {
-            saltosRestantes--;
-            rb.velocity = new Vector2(rb.velocity.x, 0f);
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
-        }
- }
+
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
+
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isGrounded = true;
