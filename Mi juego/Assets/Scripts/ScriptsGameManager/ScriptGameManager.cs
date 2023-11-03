@@ -39,7 +39,7 @@ public class ScriptGameManager : MonoBehaviour
         puntosTotales += puntosASumar;
         Debug.Log(puntosTotales);
         hud.ActualizarPuntos(puntosTotales);
-        if(SceneManager.GetActiveScene().name == "Level1" && puntosTotales >= 1)
+        if(SceneManager.GetActiveScene().name == "Level1" && puntosTotales >= 10)
         {
             SceneManager.LoadScene("Level2");
         }

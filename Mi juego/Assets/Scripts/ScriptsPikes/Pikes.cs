@@ -23,7 +23,7 @@ public class Pikes : MonoBehaviour
             ScriptGameManager.instance.PerderVida();
 
 
-            other.gameObject.GetComponent<CharacterController>().AplicarGolpe();
+          other.gameObject.GetComponent<CharacterController>().AplicarGolpe();
         }
     }
 }
