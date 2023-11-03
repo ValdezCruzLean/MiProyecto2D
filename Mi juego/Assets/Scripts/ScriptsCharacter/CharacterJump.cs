@@ -36,14 +36,20 @@ public class CharacterJump : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D otherTag)
     {
-        isGrounded = true;
+        if (otherTag.gameObject.CompareTag("Mapa"))
+        {
+            isGrounded = true;
+        }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnCollisionExit2D(Collision2D otherTag)
     {
-        isGrounded = false;
+        if (otherTag.gameObject.CompareTag("Mapa"))
+        {
+            isGrounded = false;
+        }
     }
 
 

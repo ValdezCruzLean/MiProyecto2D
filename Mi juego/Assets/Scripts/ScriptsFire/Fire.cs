@@ -19,6 +19,20 @@ public class Fire : MonoBehaviour
 
         
     }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+
+            ScriptGameManager.instance.PerderVida();
+            Destroy(this.gameObject);
+        }
+        if (other.gameObject.CompareTag("Mapa"))
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
 
     private void EliminateFire ()
     {
