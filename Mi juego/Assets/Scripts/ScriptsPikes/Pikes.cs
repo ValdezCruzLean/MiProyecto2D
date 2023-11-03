@@ -19,7 +19,7 @@ public class Pikes : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            //h
+            
             ScriptGameManager.instance.PerderVida();
 
 

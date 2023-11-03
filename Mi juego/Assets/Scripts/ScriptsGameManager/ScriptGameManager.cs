@@ -39,14 +39,28 @@ public class ScriptGameManager : MonoBehaviour
         puntosTotales += puntosASumar;
         Debug.Log(puntosTotales);
         hud.ActualizarPuntos(puntosTotales);
+        if(SceneManager.GetActiveScene().name == "Level1" && puntosTotales >= 1)
+        {
+            SceneManager.LoadScene("Level2");
+        }
+
+        if (SceneManager.GetActiveScene().name == "Level2" && puntosTotales >= 1)
+        {
+            SceneManager.LoadScene("YouWin");
+        }
+
     }
 
     public void PerderVida()
     {
         vidas -= 1;
-        if (vidas == 0)
+        if ( SceneManager.GetActiveScene().name == "Level1" && vidas == 0)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("GameOver");
+        }
+        if (SceneManager.GetActiveScene().name == "Level2" && vidas == 0)
+        {
+            SceneManager.LoadScene("GameOver2");
         }
         hud.DesactivarVida(vidas);
         
