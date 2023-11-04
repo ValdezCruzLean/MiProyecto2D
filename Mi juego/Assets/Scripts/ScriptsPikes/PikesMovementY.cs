@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PikesMovementY : MonoBehaviour
 {
+    private float posicionEliminarY = 25;
     public float velocidad = 1.0f;
     public Vector3 direccion = Vector3.up; // Puedes ajustar la direcci?n del movimiento
     // Start is called before the first frame update
@@ -17,6 +19,13 @@ public class PikesMovementY : MonoBehaviour
     // Update is called once per framea
     void Update()
     {
+        if (SceneManager.GetActiveScene().name == "Level2")
+        {
+            if (this.transform.position.y >= posicionEliminarY)
+            {
+                Destroy(this.gameObject);
+            }
+        }
         // Calcula el desplazamiento basado en la direcci?n y la velocidad
         Vector3 desplazamiento = direccion * velocidad * Time.deltaTime;
 

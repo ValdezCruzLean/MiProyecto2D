@@ -12,7 +12,7 @@ public class SpawnerFire : MonoBehaviour
     {
         StartCoroutine("MiCorrutina");
         speed = 3f;  
-        InvokeRepeating("GenerateFire",0,2f);
+        InvokeRepeating("GenerateFire",0,1f);
     }
 
     // Update is called once per frame
