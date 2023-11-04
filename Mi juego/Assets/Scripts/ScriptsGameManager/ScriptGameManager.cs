@@ -10,6 +10,8 @@ public class ScriptGameManager : MonoBehaviour
     public int PuntosTotales { get {  return puntosTotales; } }
     private int puntosTotales;
     private int vidas = 3;
+    public AudioClip damageReceived;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +55,7 @@ public class ScriptGameManager : MonoBehaviour
 
     public void PerderVida()
     {
+        AudioManager.Instance.ReproducirSonido(damageReceived);
         vidas -= 1;
         if ( SceneManager.GetActiveScene().name == "Level1" && vidas == 0)
         {
