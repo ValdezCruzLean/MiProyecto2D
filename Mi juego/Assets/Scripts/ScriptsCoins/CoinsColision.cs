@@ -5,6 +5,7 @@ using UnityEngine;
 public class CoinsColision : MonoBehaviour
 {
     public int valor = 1;
+    public AudioClip clipRecolectar;
    
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class CoinsColision : MonoBehaviour
         {
             ScriptGameManager.instance.SumarPuntos(valor);
             Destroy(this.gameObject);
+            AudioManager.Instance.ReproducirSonido(clipRecolectar);
         }
     }
 }

@@ -7,6 +7,7 @@ public class CharacterJump : MonoBehaviour
    [SerializeField] private float jumpForce = 2500f;//fuerza
     private bool isGrounded;
     private Rigidbody2D rb;
+    public AudioClip jumpSound;
    // public int saltosMaximos = 1;
     //private int saltosRestantes;
   
@@ -25,6 +26,7 @@ public class CharacterJump : MonoBehaviour
     {
        if(isGrounded && Input.GetButton("Jump"))
         {
+            AudioManager.Instance.ReproducirSonido(jumpSound);
             Jump();
         }
 
