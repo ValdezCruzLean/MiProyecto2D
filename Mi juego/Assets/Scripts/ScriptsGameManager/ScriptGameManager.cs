@@ -46,7 +46,7 @@ public class ScriptGameManager : MonoBehaviour
             SceneManager.LoadScene("Level2");
         }
 
-        if (SceneManager.GetActiveScene().name == "Level2" && puntosTotales >= 1)
+        if (SceneManager.GetActiveScene().name == "Level2" && puntosTotales >= 7)
         {
             SceneManager.LoadScene("YouWin");
         }

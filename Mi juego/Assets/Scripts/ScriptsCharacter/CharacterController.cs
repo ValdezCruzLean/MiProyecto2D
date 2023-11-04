@@ -11,6 +11,8 @@ public class CharacterController : MonoBehaviour
     private bool isFacing = false;
     private Rigidbody2D rb;
     private bool isGrounded;
+   // public AudioClip runSound;
+
 
 
     // Start is called before the first frame update
@@ -36,10 +38,13 @@ public class CharacterController : MonoBehaviour
 
     private void Flip(float movementX)
     {
+
         if ((isFacing == true && movementX < 0) || (isFacing == false && movementX > 0))
         {
             isFacing = !isFacing;
             transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+            //AudioManager.Instance.ReproducirSonido(runSound);
+
         }
     }
 

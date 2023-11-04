@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Mapa
   - PikesMovement
+  - Pikes
+  - Slime
   layers:
   - Default
   - TransparentFX

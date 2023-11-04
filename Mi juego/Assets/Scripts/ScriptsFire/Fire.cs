@@ -31,6 +31,15 @@ public class Fire : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        if (other.gameObject.CompareTag("Pikes"))
+        {
+            Destroy(this.gameObject);
+        }
+        if (other.gameObject.CompareTag("Slime"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 

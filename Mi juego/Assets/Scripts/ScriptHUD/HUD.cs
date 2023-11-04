@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HUD : MonoBehaviour
 {
@@ -14,9 +15,19 @@ public class HUD : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        puntos.text = "Monedas: " + ScriptGameManager.instance.PuntosTotales.ToString() + "/10";
+    void Update() { 
+        if (SceneManager.GetActiveScene().name == "Level1")
+        {
+            puntos.text = "Monedas: " + ScriptGameManager.instance.PuntosTotales.ToString() + "/10";
+        }
+       if (SceneManager.GetActiveScene().name == "Level2")
+      {
+            puntos.text = "Almas: " + ScriptGameManager.instance.PuntosTotales.ToString() + "/7";
+        }
+
+
+
+        //puntos.text = "Monedas: " + ScriptGameManager.instance.PuntosTotales.ToString() + "/10";
     }
 
     public void ActualizarPuntos(int puntosTotales)
