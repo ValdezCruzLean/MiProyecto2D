@@ -17,6 +17,9 @@ public class YouWin : MonoBehaviour
     {
         
     }
+    /* Método público que se utiliza para cambiar de escena en el juego. Cuando se llama a este método, 
+     se carga la escena "MainMenu" utilizando SceneManager.LoadScene("MainMenu").
+     Esta función se asocia con un botón de la interfaz de usuario que permite al jugador regresar al menú principal.*/
     public void EscenaMenu()
     {
         SceneManager.LoadScene("MainMenu");
