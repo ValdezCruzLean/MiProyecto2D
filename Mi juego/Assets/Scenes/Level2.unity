@@ -823,7 +823,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &210571599
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1913,7 +1913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3005dc932868a9143a3cb8845e9ae227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fires: {fileID: 3480753068462261540, guid: 6bfa22c94235493479c0ea2a585321c4, type: 3}
+  fires: {fileID: 43007188625096098, guid: 6bfa22c94235493479c0ea2a585321c4, type: 3}
   speed: 0
 --- !u!95 &528429251
 Animator:
@@ -2311,7 +2311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5474303cdbe1344adddc4625febcdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 1800
+  jumpForce: 11.7
   jumpSound: {fileID: 8300000, guid: 9b6878184dbe3134db48387f0237893e, type: 3}
 --- !u!81 &535397797
 AudioListener:
@@ -3560,8 +3560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455036c6080105f4e951602fb48e65ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 1.5
-  direccion: {x: 0, y: -1, z: 0}
 --- !u!95 &835677871
 Animator:
   serializedVersion: 5
@@ -4811,7 +4809,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1f793a90539a7c46a0008a7f70c416d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 1
   clipRecolectar: {fileID: 8300000, guid: baab416654016e04986a91c42dc45de2, type: 3}
 --- !u!61 &1081238725
 BoxCollider2D:
@@ -17121,7 +17118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1f793a90539a7c46a0008a7f70c416d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 1
   clipRecolectar: {fileID: 8300000, guid: baab416654016e04986a91c42dc45de2, type: 3}
 --- !u!61 &1433108871
 BoxCollider2D:
@@ -34931,7 +34927,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1f793a90539a7c46a0008a7f70c416d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 1
   clipRecolectar: {fileID: 8300000, guid: baab416654016e04986a91c42dc45de2, type: 3}
 --- !u!1001 &1545821922
 PrefabInstance:

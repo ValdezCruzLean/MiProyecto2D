@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CharacterJump : MonoBehaviour
 {   /*Variable que representa la fuerza del salto.*/
-    [SerializeField] private float jumpForce = 2500f;
+    //fuerrza de salto sin deltatime es en level1= 11.7 y en level2 11.7
+  /* [SerializeField]*/ private float jumpForce = 11.7f;
     /*Variable privada llamada isGrounded, que se utiliza para rastrear si el personaje está en el suelo o no.*/
     private bool isGrounded;
     /*Variable privada llamada rb del tipo Rigidbody2D, que se utilizará para acceder al componente Rigidbody2D del GameObject.*/
@@ -43,8 +44,8 @@ public class CharacterJump : MonoBehaviour
     /*Este método se encarga de aplicar la fuerza de salto al componente Rigidbody2D del personaje.*/
     private void Jump()
     {
-
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
+        //Desde un comienzo utilizaba el deltatime pero despues de la consulta realizada quite el mismo
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce /** Time.deltaTime*/ );
 
     }
     /* Este método se llama cuando el GameObject entra en colisión con otro objeto en 2D. 

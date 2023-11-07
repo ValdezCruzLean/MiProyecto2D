@@ -1939,8 +1939,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535397788}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.2, y: -0.4, z: 0.037607692}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -29.2, y: -0.4, z: 0.0376077}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2005,7 +2005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5474303cdbe1344adddc4625febcdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 1800
+  jumpForce: 11.7
   jumpSound: {fileID: 8300000, guid: 9b6878184dbe3134db48387f0237893e, type: 3}
 --- !u!81 &535397797
 AudioListener:
@@ -3073,8 +3073,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455036c6080105f4e951602fb48e65ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 1.5
-  direccion: {x: 0, y: -1, z: 0}
 --- !u!95 &835677871
 Animator:
   serializedVersion: 5
@@ -24428,7 +24426,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1f793a90539a7c46a0008a7f70c416d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 1
   clipRecolectar: {fileID: 8300000, guid: baab416654016e04986a91c42dc45de2, type: 3}
 --- !u!1001 &1560743833
 PrefabInstance:
@@ -25760,8 +25757,8 @@ RectTransform:
   - {fileID: 1064891752}
   - {fileID: 1313023460}
   - {fileID: 817083646}
-  - {fileID: 2003599396}
   - {fileID: 1868253729}
+  - {fileID: 2003599396}
   - {fileID: 225079388}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26035,8 +26032,8 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 555616894}
   - {fileID: 1064844984}
-  - {fileID: 535397792}
   - {fileID: 113707451}
+  - {fileID: 535397792}
   - {fileID: 1538073963}
   - {fileID: 1063040692}
   - {fileID: 2060131910}
